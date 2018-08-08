@@ -1,0 +1,20 @@
+<h1>Post <%= @posts.title %> + Comments</h1>
+<h4>An installment of Cooking with Chef Dee</h4>
+
+<p><%= @posts.body %></p>
+<hr>
+
+<h4>Comments</h4>
+<div class="comment-container" >
+    <% @comments.each do |c| %>
+
+    <div class="comment-body">
+    <p><strong> <%= c.title %></strong></p>
+    <div>
+      <p><%= c.body %></p>
+    </div>
+    <% end %>
+    </div>
+</div>
+
+<p><%= link_to 'Back', root_path %></p>
